@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
 import { Monitor, ChevronDown, Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const services = [
   { name: 'Kurumsal Web Sitesi', path: '/hizmet/kurumsal' },
@@ -32,11 +33,10 @@ export default function Navbar() {
   return (
     <nav className={`fixed w-full z-50 top-0 transition-all duration-500 ${scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl' : 'bg-transparent py-5'}`}>
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2 z-50 group">
           <div className="w-10 h-10 rounded-xl bg-cyan-500 overflow-hidden shadow-lg shadow-cyan-500/20 group-hover:rotate-12 transition-transform duration-500">
             <img 
-              src="https://ais-pre-ugsvqv4e3nhiqg3jn4taj2-157054860395.europe-west2.run.app/api/attachments/42220188-7510-4447-9f17-889895048259" 
+              src={logo}
               alt="Wevrax Logo" 
               className="w-full h-full object-cover"
             />
