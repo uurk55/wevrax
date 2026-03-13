@@ -5,6 +5,8 @@ import { Send, CheckCircle2, ArrowRight, ArrowLeft, Globe, Target, Rocket, Phone
 export default function Contact() {
   const [step, setStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,9 +18,44 @@ export default function Contact() {
   const handleNext = () => setStep(s => s + 1);
   const handleBack = () => setStep(s => s - 1);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setSubmitError(null);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xkoqbddd', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          service: formData.service,
+          budget: formData.budget,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          service: '',
+          budget: '',
+          message: '',
+        });
+      } else {
+        setSubmitError('Şu anda gönderilemiyor, lütfen biraz sonra tekrar deneyin.');
+      }
+    } catch {
+      setSubmitError('Şu anda gönderilemiyor, lütfen internet bağlantınızı kontrol edin.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -245,11 +282,16 @@ export default function Contact() {
                         </button>
                         <button 
                           type="submit"
-                          className="w-2/3 py-5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group shimmer-button"
+                          disabled={isSubmitting}
+                          className="w-2/3 py-5 bg-cyan-600 hover:bg-cyan-500 disabled:bg-cyan-800 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group shimmer-button"
                         >
-                          Analizi Gönder <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                          {isSubmitting ? 'Gönderiliyor...' : 'Analizi Gönder'}
+                          <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </button>
                       </div>
+                      {submitError && (
+                        <p className="text-red-400 text-sm mt-4 text-center">{submitError}</p>
+                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>
