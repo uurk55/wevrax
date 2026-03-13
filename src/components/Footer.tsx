@@ -33,7 +33,7 @@ export default function Footer() {
                 <MessageCircle size={18} />
               </a>
               <a
-                href="mailto:hello@ajans.com"
+                href="mailto:iletisim@wevrax.com"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all border border-white/5"
               >
                 <Mail size={18} />
@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-slate-400 text-sm">
                 <Mail size={18} className="text-cyan-500 shrink-0" />
-                <span>hello@ajans.com</span>
+                <span>iletisim@wevrax.com</span>
               </li>
             </ul>
           </div>

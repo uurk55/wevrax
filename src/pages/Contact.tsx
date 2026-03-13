@@ -140,7 +140,7 @@ export default function Contact() {
                           type="email" 
                           required
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:border-cyan-500 outline-none transition-all"
-                          placeholder="ahmet@sirket.com"
+                          placeholder="iletisim@wevrax.com"
                           value={formData.email}
                           onChange={e => setFormData({...formData, email: e.target.value})}
                         />
