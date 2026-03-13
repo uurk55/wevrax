@@ -7,9 +7,9 @@ const projects = [
   {
     id: 1,
     title: 'Edu 3D Model Dünyası',
-    category: 'Eğitim / Teknoloji',
-    desc: '3D Modelleme ve Eğitim Platformu. edu3dmodel.com için geliştirilen interaktif öğrenme arayüzü.',
-    result: 'Öğrenci katılımında %150 artış.',
+    category: 'BLOG / EĞİTİM',
+    desc: '3D yazıcılar, modelleme ve baskı süreçleri hakkında bilgilendirici içerikler; ekipman seçimi, maliyet hesaplama ve 3D baskıdan gelir elde etmeye yönelik pratik öneriler.',
+    result: 'Okuyucular, 3D yazıcı yatırımı ve baskı süreçleri konusunda daha bilinçli kararlar almaya başladı.',
     img: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800&h=600',
     color: 'from-cyan-500/20',
     url: 'https://edu3dmodel.com'
@@ -17,9 +17,9 @@ const projects = [
   {
     id: 2,
     title: 'Kariyer Rotası',
-    category: 'Kariyer / Portfolyo',
-    desc: 'Dijital Kariyer Rehberi ve Portfolyo. kariyerrotasi.com için tasarlanan modern iş arama ve profil platformu.',
-    result: 'İş başvurusu dönüşümlerinde %80 iyileşme.',
+    category: 'BLOG / KARİYER',
+    desc: 'Kariyer, kalite yönetimi, yapay zeka ve verimlilik odağında içerikler; CV hazırlamadan performans takibine kadar iş hayatını veriyle iyileştiren pratik ve uygulanabilir öneriler.',
+    result: 'Okuyucular, yapay zeka destekli araçlarla iş başvurusu ve iş içi verimliliklerinde belirgin artış yakaladı.',
     img: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800&h=600',
     color: 'from-orange-500/20',
     url: 'https://kariyerrotasi.com'
@@ -28,11 +28,11 @@ const projects = [
 
 export default function References() {
   const [filter, setFilter] = React.useState('Tümü');
-  const categories = ['Tümü', 'Eğitim', 'Kariyer', 'Portfolyo'];
+  const categories = ['Tümü', 'Blog', 'Eğitim', 'Kariyer'];
 
   const filteredProjects = filter === 'Tümü' 
     ? projects 
-    : projects.filter(p => p.category.includes(filter));
+    : projects.filter((p) => p.category.toLowerCase().includes(filter.toLowerCase()));
 
   return (
     <div className="pt-32 pb-24 px-6">
@@ -44,7 +44,7 @@ export default function References() {
           >
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Referanslarımız</h1>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-              Dijital dünyada otorite kurduğumuz, başarı hikayesine dönüştürdüğümüz seçkin projeler.
+              Teslim ettiğimiz projelerin bir kısmına göz atın.
             </p>
           </motion.div>
         </header>
@@ -66,7 +66,7 @@ export default function References() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-3 gap-6">
           {filteredProjects.map((project, i) => (
             <motion.a
               key={project.id}
@@ -79,8 +79,8 @@ export default function References() {
               transition={{ delay: i * 0.1 }}
               className="group relative block"
             >
-              <div className="glass-card rounded-[3rem] overflow-hidden border border-white/5 h-full flex flex-col hover:border-cyan-500/30 transition-all duration-500">
-                <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="glass-card rounded-3xl overflow-hidden border border-white/5 h-full flex flex-col hover:border-cyan-500/30 transition-all duration-500">
+                <div className="relative aspect-[16/9] overflow-hidden">
                   <img 
                     src={project.img} 
                     alt={project.title} 
@@ -97,21 +97,21 @@ export default function References() {
                   </div>
                 </div>
                 
-                <div className="p-10 flex-grow flex flex-col">
-                  <div className="flex justify-between items-start mb-6">
+                <div className="p-6 md:p-7 flex-grow flex flex-col">
+                  <div className="flex justify-between items-start mb-4">
                     <div>
                       <p className="text-cyan-500 text-xs font-bold uppercase tracking-widest mb-2">{project.category}</p>
-                      <h3 className="text-3xl font-bold text-white">{project.title}</h3>
+                      <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                     </div>
                   </div>
                   
-                  <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
                     {project.desc}
                   </p>
                   
-                  <div className="mt-auto pt-8 border-t border-white/5">
+                  <div className="mt-auto pt-5 border-t border-white/5">
                     <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Başarı Metriği</p>
-                    <p className="text-lg text-cyan-400/90 font-medium italic">"{project.result}"</p>
+                    <p className="text-base text-cyan-400/90 font-medium italic">"{project.result}"</p>
                   </div>
                 </div>
               </div>

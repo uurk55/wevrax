@@ -10,10 +10,10 @@ const faqCategories = [
     icon: <Cpu size={20} className="text-cyan-500" />,
     questions: [
       { q: "Web sitesi mülkiyeti kime ait?", a: "Tüm haklar ve yönetim tamamen size aittir. Kiralama değil, tapulu mülk sahibi olursunuz." },
-      { q: "Domain ve Hosting ile ben mi uğraşacağım?", a: "Hayır, tüm teknik kurulum ve yönetim 'Anahtar Teslim' olarak bizim tarafımızdan halledilir." },
-      { q: "Sitem ne kadar sürede yayına girer?", a: "İhtiyaçlarınıza göre genellikle 7 ile 14 iş günü içerisinde projenizi canlıya alıyoruz." },
-      { q: "Google’da bulunabilecek miyim?", a: "Evet, tüm sitelerimizi en güncel SEO standartlarına uygun ve Google Haritalar entegreli inşa ediyoruz." },
-      { q: "Teknik bir sorun çıkarsa ne yapacağım?", a: "7/24 teknik destek hattımızla yayından sonra da yanınızdayız." }
+      { q: "Domain ve Hosting ile ben mi uğraşacağım?", a: "Hayır. Domain alımı, hosting kurulumu ve tüm teknik yapılandırma tarafımızdan yönetilir. Siz hiçbir şeyle uğraşmazsınız." },
+      { q: "Mevcut sitem varsa modernize edebilir misiniz?", a: "Evet, mevcut sitenizi günümüz standartlarına taşıyabiliyoruz. Hız, tasarım ve mobil uyum konularında tam dönüşüm sağlıyoruz." },
+      { q: "Web sitem Google'da ne zaman görünür?", a: "Siteyi yayına aldıktan sonra temel SEO ayarlarını ve Search Console kurulumunu yapıyoruz. Organik arama sonuçlarında görünürlük; sektör, rekabet ve içerik sıklığına göre birkaç hafta içinde kademeli olarak artar." },
+      { q: "Sitem mobilde yavaş açılır mı?", a: "Proje başlangıcından itibaren performans odaklı ilerliyoruz. Görselleri optimize ediyor, gereksiz kod şişkinliğinden kaçınıyor ve modern altyapılar kullanıyoruz. Bu sayede özellikle mobilde hızlı ve akıcı bir deneyim hedefliyoruz." }
     ]
   },
   {
@@ -21,11 +21,11 @@ const faqCategories = [
     title: 'Süreç ve İletişim',
     icon: <Settings size={20} className="text-cyan-500" />,
     questions: [
-      { q: "Bir projenin tamamlanması ne kadar sürer?", a: "Projenin kapsamına göre değişmekle birlikte, ortalama bir kurumsal site 2-4 hafta, landing pageler ise 1 hafta içinde yayına alınır." },
-      { q: "Tasarım sürecine müdahale edebilir miyim?", a: "Elbette. Tasarım aşamasında sizinle sürekli iletişimde kalıyor ve onayınız olmadan kodlama aşamasına geçmiyoruz." },
-      { q: "İçerikleri ben mi sağlamalıyım?", a: "İsterseniz içerikleri siz sağlayabilirsiniz, isterseniz profesyonel metin yazarlarımız markanız için içerik üretebilir." },
-      { q: "Revizyon hakkım var mı?", a: "Evet, tasarım aşamasında sınırsız, kodlama aşamasında ise belirlenen kapsam dahilinde revizyon haklarınız bulunmaktadır." },
-      { q: "Proje bittikten sonra destek veriyor musunuz?", a: "Evet, yayından sonraki ilk 3 ay boyunca teknik destek ve bakım hizmetimiz ücretsizdir." }
+      { q: "Site içeriklerini ben mi hazırlamalıyım?", a: "Evet. Metin ve görselleri siz hazırlıyorsunuz; biz yapıyı ve yönlendirmeyi sunuyoruz." },
+      { q: "Sitem ne kadar sürede yayına girer?", a: "Proje başlangıcından itibaren 10 iş günü içinde siteniz yayına alınır." },
+      { q: "Teslim sonrası destek var mı?", a: "Evet. Teslim sonrası 30 gün ücretsiz teknik destek sunuyoruz. Uzun vadeli bakım paketlerimiz de mevcuttur." },
+      { q: "Çalışma süreciniz nasıl ilerliyor?", a: "Önce ihtiyaçlarınızı dinleyip kapsamı netleştiriyoruz. Ardından tasarım taslağı, geliştirme ve test aşamalarını şeffaf bir şekilde sizinle paylaşarak ilerliyoruz. Her kritik aşamada onayınızı alıyoruz." },
+      { q: "Revizyon hakkım var mı?", a: "Evet. Proje sürecinde tasarım ve içerik yerleşimi için belirli sayıda revizyon hakkınız bulunur. Amacımız, markanızı doğru yansıtan sonuca birlikte ulaşmak." }
     ]
   },
   {
@@ -33,11 +33,9 @@ const faqCategories = [
     title: 'Fiyatlandırma ve Ödeme',
     icon: <CreditCard size={20} className="text-cyan-500" />,
     questions: [
-      { q: "Fiyatlar nasıl belirleniyor?", a: "Her proje benzersizdir. İhtiyaçlarınızı analiz ettikten sonra size özel, şeffaf bir fiyat teklifi sunuyoruz." },
-      { q: "Ödeme planı nasıldır?", a: "Genellikle %50 peşinat ve %50 proje tesliminde olacak şekilde çalışıyoruz." },
-      { q: "Hosting ve Domain ücretleri dahil mi?", a: "İlk yıl için hosting ve domain hizmetini hediye ediyoruz. Sonraki yıllarda sadece yenileme ücretlerini ödersiniz." },
-      { q: "Ekstra özellikler sonradan eklenebilir mi?", a: "Evet, kullandığımız modüler yapı sayesinde sitenize ileride yeni özellikler eklemek oldukça kolaydır." },
-      { q: "Fatura kesiyor musunuz?", a: "Evet, tüm hizmetlerimiz için resmi fatura düzenlenmektedir." }
+      { q: "Fiyatlar ne kadar?", a: "Her proje ihtiyaca göre şekillendiğinden fiyatlarımız proje bazlı belirlenmektedir. Ücretsiz analiz görüşmemizde size net bir teklif sunuyoruz." },
+      { q: "Ödeme yapısı nasıl oluyor?", a: "Genellikle proje başlangıcında kapora, teslim öncesinde ise kalan tutar şeklinde çalışıyoruz. Detaylı ödeme planını teklif aşamasında şeffaf şekilde paylaşıyoruz." },
+      { q: "Sonradan gizli ek ücret çıkar mı?", a: "Hazırladığımız teklif, kapsamı net bir şekilde içerir. Siz ekstra bir talepte bulunmadığınız sürece sonradan sürpriz veya gizli ek ücret çıkarmıyoruz." }
     ]
   }
 ];

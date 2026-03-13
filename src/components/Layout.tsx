@@ -59,7 +59,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/905551234567" 
+        href="https://wa.me/905304690295" 
         target="_blank" 
         rel="noreferrer"
         className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full pulse-whatsapp flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"

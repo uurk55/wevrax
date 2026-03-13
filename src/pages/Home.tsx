@@ -28,7 +28,7 @@ const services = [
   {
     id: 'kurumsal',
     title: 'Kurumsal',
-    desc: 'Şirketinizin dijital dünyadaki en güçlü temsilcisi.',
+    desc: 'Şirketinizin dijital kimliğini, kurumsal standartlarda ve güven veren bir yapıyla inşa ediyoruz.',
     icon: <Building2 className="text-cyan-500" size={32} />,
     size: 'md',
     path: '/hizmet/kurumsal'
@@ -36,7 +36,7 @@ const services = [
   {
     id: 'portfolyo',
     title: 'Kişisel',
-    desc: 'Yeteneklerinizi global standartlarda sergileyin.',
+    desc: "Kişisel markanızı profesyonel bir web sitesiyle destekleyin. Freelancer'dan girişimciye, herkes için.",
     icon: <User className="text-cyan-500" size={32} />,
     size: 'sm',
     path: '/hizmet/portfolyo'
@@ -44,7 +44,7 @@ const services = [
   {
     id: 'landing-page',
     title: 'Landing Page',
-    desc: 'Yüksek dönüşümlü, satış odaklı tek sayfa çözümleri.',
+    desc: 'Kampanya veya ürününüz için yüksek dönüşüm oranı hedefleyen, odaklı tek sayfa çözümleri.',
     icon: <Rocket className="text-cyan-500" size={32} />,
     size: 'sm',
     path: '/hizmet/landing-page'
@@ -52,7 +52,7 @@ const services = [
   {
     id: 'modernizasyon',
     title: 'Modernizasyon',
-    desc: 'Eski görünümünüzü modern bir yapıya kavuşturun.',
+    desc: 'Mevcut sitenizi günümüz standartlarına taşıyoruz. Hız, tasarım ve kullanıcı deneyimi garantili.',
     icon: <RefreshCw className="text-cyan-500" size={32} />,
     size: 'md',
     path: '/hizmet/modernizasyon'
@@ -62,25 +62,25 @@ const services = [
 const trustCards = [
   {
     title: "24 Saat Canlı Destek",
-    desc: "İhtiyaç duyduğunuz her an bir tık uzağınızdayız.",
+    desc: "Bir sorunuz mu var? WhatsApp'tan bize ulaşın, en kısa sürede yanıt alın.",
     icon: <Headset size={24} className="text-cyan-500" />,
     stat: null
   },
   {
     title: "%100 Mobil Uyum",
-    desc: "Tüm cihazlarda kusursuz görünen, akıcı deneyimler.",
+    desc: "Siteniz tüm modern cihazlarda hızlı, akıcı ve sorunsuz çalışır.",
     icon: <Smartphone size={24} className="text-cyan-500" />,
     stat: { value: 100, suffix: "%" }
   },
   {
     title: "Hızlı Teslimat",
-    desc: "İşletmenizi dijital dünyaya ışınlayan hızlı süreçler.",
+    desc: "Süreç başladığı andan itibaren 10 iş günü içinde siteniz yayında olur.",
     icon: <Zap size={24} className="text-cyan-500" />,
     stat: null
   },
   {
-    title: "7/24 Teknik Erişim",
-    desc: "Kesintisiz altyapı ve anlık teknik müdahale garantisi.",
+    title: "Güvenli Altyapı",
+    desc: "Güncel teknolojilerle kurulan altyapı sayesinde siteniz stabil ve güvenli kalır.",
     icon: <Globe size={24} className="text-cyan-500" />,
     stat: null
   }
@@ -88,8 +88,8 @@ const trustCards = [
 
 const miniFaqs = [
   { q: "Web sitesi mülkiyeti kime ait?", a: "Tüm haklar ve yönetim tamamen size aittir. Kiralama değil, tapulu mülk sahibi olursunuz." },
-  { q: "Domain ve Hosting ile ben mi uğraşacağım?", a: "Hayır, tüm teknik kurulum ve yönetim 'Anahtar Teslim' olarak bizim tarafımızdan halledilir." },
-  { q: "Sitem ne kadar sürede yayına girer?", a: "İhtiyaçlarınıza göre genellikle 7 ile 14 iş günü içerisinde projenizi canlıya alıyoruz." }
+  { q: "Domain ve Hosting ile ben mi uğraşacağım?", a: "Hayır. Domain alımı, hosting kurulumu ve tüm teknik yapılandırma tarafımızdan yönetilir. Siz hiçbir şeyle uğraşmazsınız." },
+  { q: "Sitem ne kadar sürede yayına girer?", a: "Proje başlangıcından itibaren 10 iş günü içinde siteniz yayına alınır." }
 ];
 
 export default function Home() {
@@ -119,18 +119,18 @@ export default function Home() {
             className="text-center lg:text-left lg:pr-12"
           >
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
-              Dijital Otoritenizi <br />
-              <span className="text-cyan-500 neon-text">Wevrax İle İnşa Edin.</span>
+              Profesyonel Web Siteniz <br />
+              <span className="text-cyan-500 neon-text">10 İş Gününde Yayında.</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              Sadece bir web sitesi değil; hızlı, güvenli ve satış odaklı bir dijital ekosistem kuruyoruz.
+              Wevrax olarak her projeyi baştan sona yönetiyoruz. Tasarım, geliştirme, domain ve hosting — hepsi bizden. Siz sadece büyümeye odaklanın.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link to="/iletisim" className="px-10 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all shadow-xl shadow-cyan-500/20 hover:scale-105 shimmer-button">
-                Ücretsiz Web Analizi Al
+                Ücretsiz Analiz Al
               </Link>
               <Link to="/referanslar" className="px-10 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all">
-                Projeleri İncele
+                Projelerimizi İncele
               </Link>
             </div>
           </motion.div>
@@ -262,7 +262,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-white mb-4">Hizmetlerimiz</h2>
-            <p className="text-slate-400">Dijital otoritenizi inşa etmek için sunduğumuz çözümler.</p>
+            <p className="text-slate-400">Her bütçeye uygun, anahtar teslim web çözümleri.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -298,8 +298,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
             <div>
-              <h2 className="text-4xl font-display font-bold text-white mb-4">Seçkin Projelerimiz</h2>
-              <p className="text-slate-400">Dijital otoriteyi inşa ettiğimiz bazı çalışmalarımız.</p>
+              <h2 className="text-4xl font-display font-bold text-white mb-4">Referanslarımız</h2>
+              <p className="text-slate-400">Teslim ettiğimiz projelerin bir kısmına göz atın.</p>
             </div>
             <Link to="/referanslar" className="text-cyan-500 font-bold flex items-center gap-2 hover:gap-3 transition-all">
               Tüm Referansları Gör <ArrowRight size={20} />
@@ -308,8 +308,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "Edu 3D Model Dünyası", cat: "Eğitim", url: "https://edu3dmodel.com", img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800&h=600" },
-              { title: "Kariyer Rotası", cat: "Portfolyo", url: "https://kariyerrotasi.com", img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800&h=600" }
+              { title: "Edu 3D Model Dünyası", cat: "BLOG / EĞİTİM", url: "https://edu3dmodel.com", img: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800&h=600" },
+              { title: "Kariyer Rotası", cat: "BLOG / KARİYER", url: "https://kariyerrotasi.com", img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800&h=600" }
             ].map((p, i) => (
               <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" className="group">
                 <div className="relative aspect-[16/10] rounded-[2.5rem] overflow-hidden mb-4 border border-white/5 glass-card">
@@ -339,7 +339,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-white mb-4">Sıkça Sorulanlar</h2>
-            <p className="text-slate-400">Aklınıza takılan temel soruları yanıtladık.</p>
+            <p className="text-slate-400">Aklınıza takılan soruları yanıtladık.</p>
           </div>
 
           <div className="space-y-4">
@@ -363,10 +363,10 @@ export default function Home() {
       {/* CTA Section - py-24 */}
       <section id="contact" className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-display font-bold text-white mb-8">Dijital Otoritenizi Bugün İnşa Edin</h2>
-          <p className="text-slate-400 mb-10 text-lg">Markanızı bir üst seviyeye taşımak için sabırsızlanıyoruz.</p>
+          <h2 className="text-4xl font-display font-bold text-white mb-8">Projenizi Birlikte Hayata Geçirelim.</h2>
+          <p className="text-slate-400 mb-10 text-lg">Ücretsiz danışmanlık görüşmesi için bizimle iletişime geçin. 10 iş günü içinde siteniz yayında.</p>
           <Link to="/iletisim" className="inline-block px-12 py-5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all shadow-xl hover:scale-105 shimmer-button">
-            Hemen Başlayalım
+            Hemen Başvur
           </Link>
         </div>
       </section>

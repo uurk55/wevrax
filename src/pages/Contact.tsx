@@ -89,6 +89,7 @@ export default function Contact() {
                 </div>
                 <p className="text-slate-500 text-xs leading-relaxed">Paylaştığınız tüm bilgiler gizlilik politikamız kapsamında korunmaktadır ve sadece analiz amacıyla kullanılacaktır.</p>
               </div>
+
             </motion.div>
           </div>
 

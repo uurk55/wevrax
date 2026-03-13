@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Monitor, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
             <Link to="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 rounded-xl bg-cyan-500 overflow-hidden shadow-lg shadow-cyan-500/20 group-hover:rotate-12 transition-transform duration-500">
                 <img 
-                  src="https://ais-pre-ugsvqv4e3nhiqg3jn4taj2-157054860395.europe-west2.run.app/api/attachments/42220188-7510-4447-9f17-889895048259" 
+                  src={logo}
                   alt="Wevrax Logo" 
                   className="w-full h-full object-cover"
                 />
@@ -22,14 +23,21 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Wevrax ile dijital otoritenizi 2026 standartlarında inşa ediyoruz. Modern, hızlı ve dönüşüm odaklı web çözümleri.
+              Wevrax ile dijital otoritenizi 2026 standartlarında inşa ediyoruz. Modern, hızlı ve dönüşüm odaklı web siteleri tasarlıyoruz.
             </p>
             <div className="flex gap-4">
-              {[Instagram, Twitter, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all border border-white/5">
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a
+                href="https://wa.me/905304690295"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all border border-white/5"
+              >
+                <MessageCircle size={18} />
+              </a>
+              <a
+                href="mailto:hello@ajans.com"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all border border-white/5"
+              >
+                <Mail size={18} />
+              </a>
             </div>
           </div>
 
@@ -79,11 +87,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-slate-400 text-sm">
                 <MapPin size={18} className="text-cyan-500 shrink-0" />
-                <span>Levent, Büyükdere Cd. No:123, 34394 Şişli/İstanbul</span>
+                <span>Esenyurt, İstanbul</span>
               </li>
               <li className="flex items-center gap-3 text-slate-400 text-sm">
                 <Phone size={18} className="text-cyan-500 shrink-0" />
-                <span>+90 (212) 555 01 23</span>
+                <span>+90 530 469 02 95</span>
               </li>
               <li className="flex items-center gap-3 text-slate-400 text-sm">
                 <Mail size={18} className="text-cyan-500 shrink-0" />
@@ -95,12 +103,14 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-xs">
-            © 2026 Wevrax. Tüm hakları saklıdır.
+            © 2026 Wevrax. Tüm haklar saklıdır. Tüm dijital dokunuşlarda yanınızdayız.
           </p>
           <div className="flex items-center gap-2 text-slate-500 text-xs">
-            <span>Built with</span>
-            <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-            <span>by Otorite</span>
+            <span>Bu site</span>
+            <div className="w-5 h-5 rounded-full overflow-hidden border border-cyan-500/40 bg-cyan-500/10">
+              <img src={logo} alt="Wevrax" className="w-full h-full object-cover" />
+            </div>
+            <span>Wevrax ile tasarlandı.</span>
           </div>
         </div>
       </div>

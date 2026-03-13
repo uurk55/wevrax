@@ -46,19 +46,21 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <Link to="/" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">Anasayfa</Link>
           
-          {/* Services Dropdown */}
           <div 
             className="relative"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <Link to="/#services" className="flex items-center gap-1 text-sm font-bold text-slate-300 hover:text-white transition-colors">
+            <button
+              type="button"
+              className="flex items-center gap-1 text-sm font-bold text-slate-300 hover:text-white transition-colors"
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+            >
               Hizmetler <ChevronDown size={14} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-            </Link>
+            </button>
             <AnimatePresence>
               {isDropdownOpen && (
                 <motion.div 
@@ -110,7 +112,7 @@ export default function Navbar() {
           >
             <Link to="/" className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">Anasayfa</Link>
             <div className="flex flex-col items-center gap-4">
-              <Link to="/#services" className="text-sm font-bold text-slate-500 uppercase tracking-widest">Hizmetler</Link>
+              <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Hizmetler</span>
               {services.map((service) => (
                 <Link key={service.path} to={service.path} className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">{service.name}</Link>
               ))}
